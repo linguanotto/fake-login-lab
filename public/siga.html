@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>SIGA - Sistema Integrado de Gestão Acadêmica</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #c00;
+      padding: 10px 20px;
+    }
+    header img {
+      height: 24px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 44px);
+    }
+    .login-box {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .field-group {
+      margin-bottom: 15px;
+    }
+    .field-group label {
+      display: inline-block;
+      width: 80px;
+      font-size: 14px;
+      color: #0055b8;
+    }
+    .field-group input {
+      width: calc(100% - 80px);
+      padding: 6px 8px;
+      border: 1px solid #999;
+      border-radius: 2px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .actions {
+      margin-top: 10px;
+    }
+    .actions button {
+      background-color: #2e6cc4;
+      border: none;
+      padding: 8px 16px;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .actions button:hover {
+      background-color: #2455a8;
+    }
+    .help-link {
+      display: block;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #0055b8;
+      text-decoration: none;
+    }
+    .help-link:hover {
+      text-decoration: underline;
+    }
+    .attempts {
+      position: absolute;
+      top: 60px;
+      right: 40px;
+      text-align: center;
+      font-size: 36px;
+      color: #2e6cc4;
+    }
+    .attempts small {
+      display: block;
+      font-size: 12px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="cps-logo.png" alt="CPS Logo" />
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <form action="/siga-login" method="POST">
+        <div class="field-group">
+          <label for="username">Usuário</label>
+          <input type="text" id="username" name="username" autocomplete="username" required />
+        </div>
+        <div class="field-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <div class="actions">
+          <button type="submit">Entrar</button>
+        </div>
+        <a href="#" class="help-link">Soluções para problemas no Acesso</a>
+      </form>
+    </div>
+    <div class="attempts">
+      5
+      <small>tentativas</small>
+    </div>
+  </div>
+</body>
+</html>
